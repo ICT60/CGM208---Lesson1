@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace CGM208___Lesson_1
 {
-    public partial class Form1 : Form
+    public partial class MainForm : Form
     {
-        public Form1()
+        public MainForm()
         {
             InitializeComponent();
+        }
+
+        void btnHelloWorld_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Hello World");
         }
     }
 }
