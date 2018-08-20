@@ -34,8 +34,8 @@ namespace CGM208___Lesson_1
 
             if (isCanParseA && isCanParseB) {
                 var result = Sum(numA, numB);
-                var resultText = string.Format(textResultFormat, result);
-                MessageBox.Show(resultText);
+                var textResult = string.Format(textResultFormat, result);
+                MessageBox.Show(textResult);
             }
             else {
                 MessageBox.Show("Please enter only number..");
@@ -52,6 +52,44 @@ namespace CGM208___Lesson_1
         {
             txtNumA.Text = "0";
             txtNumB.Text = "0";
+        }
+
+        void btnMaxNumResult_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int numA = int.Parse(txtMaxNumA.Text);
+                int numB = int.Parse(txtMaxNumB.Text);
+                int numC = int.Parse(txtMaxNumC.Text);
+
+                int result = MaxNumber(numA, numB, numC);
+                string textResultFormat = "Max Number : {0}";
+
+                MessageBox.Show(string.Format(textResultFormat, result));
+            }
+            catch (System.FormatException ex)
+            {
+                MessageBox.Show("Please enter only number...");
+                ClearMaxNumberText();
+            }
+        }
+
+        int MaxNumber(int numA, int numB, int numC)
+        {
+            if (numA > numB && numA > numC)
+                return numA;
+
+            else if (numB > numA && numB > numC)
+                return numB;
+
+            return numC;
+        }
+
+        void ClearMaxNumberText()
+        {
+            txtMaxNumA.Text = "0";
+            txtMaxNumB.Text = "0";
+            txtMaxNumC.Text = "0";
         }
     }
 }
