@@ -30,7 +30,7 @@ namespace CGM208___Lesson_1
             var numB = 0;
 
             var isCanParseA = int.TryParse(txtNumA.Text, out numA);
-            var isCanParseB = int.TryParse(txtNumA.Text, out numB);
+            var isCanParseB = int.TryParse(txtNumB.Text, out numB);
 
             if (isCanParseA && isCanParseB) {
                 var result = Sum(numA, numB);
