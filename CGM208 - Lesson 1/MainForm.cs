@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace CGM208___Lesson_1
@@ -67,7 +60,7 @@ namespace CGM208___Lesson_1
 
                 MessageBox.Show(string.Format(textResultFormat, result));
             }
-            catch (System.FormatException ex)
+            catch (FormatException ex)
             {
                 MessageBox.Show("Please enter only number...");
                 ClearMaxNumberText();
